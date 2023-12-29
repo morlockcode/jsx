@@ -6,12 +6,9 @@ const el = document.getElementById('root');
 const root = ReactDOM.createRoot(el);
 
 function App() {
-    let message = "Bye there!";
-    if (Math.random() > 0.5) {
-        message = 'Hello there!';
-    }
-
-    return <h1>{message}</h1>;
+    const inputType = 'number';
+    const minValue = 5
+    return <input style={{ border: '3px solid red' }} type={inputType} min={minValue} />;
 }
 
 root.render(<App />);
